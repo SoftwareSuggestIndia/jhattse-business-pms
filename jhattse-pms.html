@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Jhattse Business PMS – All-in-one Hotel Management Software with Channel Manager, POS, Booking Engine & WhatsApp Integration. Starting at ₹16,000 + GST."/>
+    <meta name="keywords" content="hotel management software, PMS, channel manager, restaurant POS, booking engine, housekeeping management, WhatsApp integration, Jhattse Business"/>
+    <meta name="author" content="Jhattse Business"/>
+    <meta property="og:title" content="Jhattse Business – Comprehensive Hotel Management Solution"/>
+    <meta property="og:description" content="Simplify and elevate your hotel operations with our all-in-one PMS platform."/>
+    <meta property="og:type" content="website"/>
+    <title>Jhattse Business PMS | Complete Hotel Management Software</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --accent: #f59e0b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--secondary);
+            background: var(--light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1e293b 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .cta-button {
+            background: var(--accent);
+            color: var(--secondary);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background: #eab308;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            padding: 0.875rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 0.875rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 0.75rem;
+            color: var(--secondary);
+        }
+        
+        .feature-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            text-align: center;
+        }
+        
+        .pricing-card {
+            background: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 2px solid var(--primary);
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+        
+        .price-note {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .features-list {
+            text-align: left;
+            margin: 1.5rem 0;
+            list-style: none;
+        }
+        
+        .features-list li {
+            padding: 0.5rem 0;
+            color: var(--secondary);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .features-list li:before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .contact-item h4 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+        
+        .contact-item a,
+        .contact-item p {
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+        
+        /* Demo Video Section */
+        .demo {
+            padding: 4rem 0;
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+        }
+        
+        .video-container {
+            max-width: 800px;
+            margin: 2rem auto 0;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: var(--radius);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: var(--radius);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: #94a3b8;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary,
+            .btn-secondary,
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+        
+        /* Icons (using Unicode for simplicity) */
+        .icon { font-style: normal; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="https://business.jhattse.com" class="logo">Jhattse<span>Business</span></a>
+            <a href="https://business.jhattse.com/products/hotel-management-software" class="cta-button">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Jhattse Business PMS<br>Comprehensive Hotel Management Solution</h1>
+            <p>A complete, cloud-based platform designed to simplify operations, boost revenue, and elevate your guest experience — all from one intuitive dashboard.</p>
+            <div class="hero-buttons">
+                <a href="https://business.jhattse.com/products/hotel-management-software" class="btn-primary">🚀 Start Free Trial</a>
+                <a href="https://www.youtube.com/watch?v=fiePTPj-NTQ" class="btn-secondary" target="_blank">▶ Watch Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Powerful Features, Unified Platform</h2>
+                <p>Everything you need to manage your hotel efficiently — from front desk to housekeeping, bookings to billing.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏨</div>
+                    <h3>Hotel PMS (Front Desk)</h3>
+                    <p>Streamline check-ins, check-outs, room assignments, and guest profiles with an intuitive, mobile-friendly interface designed for speed and accuracy.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Channel Manager</h3>
+                    <p>Sync rates and inventory in real-time across OTAs (Booking.com, MakeMyTrip, Agoda, etc.) to prevent overbookings and maximize occupancy.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🍽️</div>
+                    <h3>Restaurant POS</h3>
+                    <p>Manage table orders, kitchen tickets, split bills, and inventory seamlessly — integrated directly with guest folios for unified billing.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>WhatsApp Business Integration</h3>
+                    <p>Automate pre-arrival messages, send booking confirmations, handle requests, and boost direct engagement with guests via WhatsApp.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🧹</div>
+                    <h3>Housekeeping Management</h3>
+                    <p>Assign tasks, track room status (clean/dirty/occupied), and coordinate staff with smart notifications and real-time updates.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Booking Engine</h3>
+                    <p>Accept commission-free direct reservations on your website with a mobile-optimized, secure booking flow that converts visitors into guests.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3>Payment Gateway Integration</h3>
+                    <p>Accept secure online payments via Razorpay, PayU, Stripe, and more — with PCI-compliant processing and automated reconciliation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>No hidden fees. No long-term contracts. Scale as you grow.</p>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Starter Plan</h3>
+                <div class="price">₹16,000 <span style="font-size:1rem;color:var(--gray);font-weight:400">+ 18% GST</span></div>
+                <p class="price-note">One-time setup fee • Annual subscription • All core modules included</p>
+                
+                <ul class="features-list">
+                    <li>Full-featured PMS & Front Desk</li>
+                    <li>Channel Manager (5+ OTA connections)</li>
+                    <li>Restaurant POS Module</li>
+                    <li>WhatsApp Business API Integration</li>
+                    <li>Housekeeping & Task Management</li>
+                    <li>Direct Booking Engine</li>
+                    <li>Payment Gateway Setup</li>
+                    <li>24/7 Customer Support</li>
+                    <li>Free Onboarding & Training</li>
+                </ul>
+                
+                <a href="https://business.jhattse.com/products/hotel-management-software" class="cta-button" style="width:100%;max-width:300px">Book a Demo Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get in Touch</h2>
+                <p>Have questions? Our hospitality tech experts are ready to help you find the perfect solution.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h4>Call Us</h4>
+                    <a href="tel:+919634410412">+91 96344 10412</a><br/>
+                    <a href="tel:+917310722298">+91 73107 22298</a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">🌐</div>
+                    <h4>Visit Website</h4>
+                    <a href="https://business.jhattse.com/products/hotel-management-software" target="_blank">business.jhattse.com</a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">🎥</div>
+                    <h4>Watch Demo</h4>
+                    <a href="https://www.youtube.com/watch?v=fiePTPj-NTQ" target="_blank">YouTube Video Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section class="demo">
+        <div class="container">
+            <h2>See Jhattse PMS in Action</h2>
+            <p>Watch our 3-minute product tour to discover how easy it is to manage your entire property from one dashboard.</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/fiePTPj-NTQ" 
+                        title="Jhattse Business Hotel Software Demo" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Jhattse Business. All rights reserved.</p>
+            <p>
+                <a href="https://business.jhattse.com/products/hotel-management-software">Product Page</a> • 
+                <a href="https://www.youtube.com/watch?v=fiePTPj-NTQ" target="_blank">Demo Video</a> • 
+                <a href="tel:+919634410412">Contact Support</a>
+            </p>
+            <p style="margin-top:0.5rem;font-size:0.85rem;opacity:0.8">
+                Prices subject to change. GST applicable as per Indian tax regulations. 
+                Free demo and consultation available for all plans.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Optional: Add Font Awesome for better icons if needed -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+</body>
+</html>
